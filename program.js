@@ -1,14 +1,28 @@
+getComputerCoice();
 
+console.log(computerSelection);
 
-getComputerChoice () // random return rock - paper - scissors
+// playerSelection // case-insensitive + get awnser as variable
 
+const playerSelection = prompt("Choose Rock, Paper or Scissors:");
 
-playerSelection // case-insensitive
-computerSelection // response from computerchoice
+// computerSelection // response from computerchoice
 
-oneRound () // function that plays one round // return
+const computerSelection = getComputerCoice();
 
-game () // calls one round * 5 times loops**
+// oneRound () // function that plays one round // return
 
+function playRound(playerSelection, computerSelection) {
 
+    return xxxxxx
+};
 
+console.log(function playRound(playerSelection, computerSelection));
+
+// calls one round * 5 times loops**
+
+game ();
+
+for (let i = 0; i < 5; i++) {
+
+    };
