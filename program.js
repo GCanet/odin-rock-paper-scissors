@@ -1,19 +1,32 @@
-getComputerCoice();
+// rock > scissors
+// scissors > paper
+// paper > rock
+
+getComputerChoice(Math.random(1,2,3))
+
+console.log(getComputerChoice());
+
+// playerSelection
+
+const playerSelection = prompt("Choose Rock, Paper or Scissors:").toLowerCase();
+
+console.log(playerSelection);
+
+// computerSelection
+// 1 = rock
+// 2 = scissors
+// 3 = paper
+
+const computerSelection = getComputerChoice(); ;
 
 console.log(computerSelection);
-
-// playerSelection // case-insensitive + get awnser as variable
-
-const playerSelection = prompt("Choose Rock, Paper or Scissors:");
-
-// computerSelection // response from computerchoice
-
-const computerSelection = getComputerCoice();
 
 // oneRound () // function that plays one round // return
 
 function playRound(playerSelection, computerSelection) {
-
+    if 
+    if
+    else
     return xxxxxx
 };
 
@@ -24,5 +37,5 @@ console.log(function playRound(playerSelection, computerSelection));
 game ();
 
 for (let i = 0; i < 5; i++) {
-
+    
     };
