@@ -55,10 +55,13 @@ function playRound(playerSelection, computerSelection) {
 playRound(playerSelection, computerSelection);
 console.log(winnerStatus);
 
-// game() function based on loop of 5 playRound()
+// game() function based on loop of 5 playRound() + winner declaration
+
+const gameWon = alert("You won the 5 rounds game, you are a WINNER!");
+const gameLost = alert("Computer won the 5 rounds game, you are a LOSER!");
 
 function game ();
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     if (let === 1) {
       playRound(playerSelection, computerSelection);
     }
@@ -73,26 +76,32 @@ function game ();
     }
     if (let === 5) {
       playRound(playerSelection, computerSelection)
-      return;
+    }
+    if (let == 6) {
+      if (playerScore > computerScore) 
+      {
+        return gameWon;
+      }
+      if (playerScore < computerScore)
+      {
+        return gameLost;
+      }
     }
   return;
 };
 
-// score = 5 = declare winner
+game();
 
-const gameWon = alert("You won the computer 5 times, you are a WINNER!");
-const gameLost = alert("The computer won 5 times, you are a LOSER!");
-
-function winner(playerScore, computerScore) {
-  if (playerScore == 5)
-    {
-      return gameWon;
-    }
-  if (computerScore == 5)
-    {
-      return gameLost;
-    }
-  return;
-}
-
-winner(playerScore, computerScore);
+// if winner dosen't work in loop i can try this*
+//
+//function winner(playerScore, computerScore) {
+//  if (playerScore > computerScore) 
+//  {
+//    return gameWon;
+//  }
+//  if (playerScore < computerScore)
+//  {
+//    return gameLost;
+//  }
+//}
+//winner(playerScore, computerScore);
