@@ -12,8 +12,6 @@ function getComputerChoice() {
   }
 }
 
-const computerSelection = getComputerChoice();
-
 // playing one round
 
 let playerScore = `0`;
