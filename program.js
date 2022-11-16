@@ -57,34 +57,30 @@ console.log(winnerStatus);
 
 // game() function based on loop of 5 playRound() + winner declaration
 
-const gameWon = alert("You won the 5 rounds game, you are a WINNER!");
-const gameLost = alert("Computer won the 5 rounds game, you are a LOSER!");
-let i = 0;
-
 function game(){
   for (let i = 0; i < 6; i++) {
-    if (let === 1) {
+    if (i === 1) {
       playRound(playerSelection, computerSelection)
     }
-    if (let === 2) {
+    if (i === 2) {
       playRound(playerSelection, computerSelection)
     }
-    if (let === 3) {
+    if (i === 3) {
       playRound(playerSelection, computerSelection)
     }
-    if (let === 4) {
+    if (i === 4) {
       playRound(playerSelection, computerSelection)
     }
-    if (let === 5) {
+    if (i === 5) {
       playRound(playerSelection, computerSelection)
     }
-    if (let == 6) {
+    if (i === 6) {
       if (playerScore > computerScore) 
       {
-        return gameWon;
+        return alert("You won the 5 rounds game, you are a WINNER!");
       } else { (playerScore < computerScore)
         {
-        return gameLost;
+        return alert("Computer won the 5 rounds game, you are a LOSER!");
         }
       }
     }
