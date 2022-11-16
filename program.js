@@ -59,6 +59,7 @@ console.log(winnerStatus);
 
 const gameWon = alert("You won the 5 rounds game, you are a WINNER!");
 const gameLost = alert("Computer won the 5 rounds game, you are a LOSER!");
+let i = 0;
 
 function game(){
   for (let i = 0; i < 6; i++) {
@@ -81,10 +82,10 @@ function game(){
       if (playerScore > computerScore) 
       {
         return gameWon;
-      }
-      if (playerScore < computerScore)
-      {
+      } else { (playerScore < computerScore)
+        {
         return gameLost;
+        }
       }
     }
   }
@@ -92,7 +93,8 @@ function game(){
 
 game();
 
-// if winner dosen't work in loop i can try this*
+// if winner dosen't work in loop with let == 6 i can try 
+// it like i was doing at start:
 //
 //function winner(playerScore, computerScore) {
 //  if (playerScore > computerScore) 
