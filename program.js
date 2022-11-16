@@ -83,7 +83,7 @@ function game ();
 const gameWon = alert("You won the computer 5 times, you are a WINNER!");
 const gameLost = alert("The computer won 5 times, you are a LOSER!");
 
-function winner(gameWon, gameLost) {
+function winner(playerScore, computerScore) {
   if (playerScore == 5)
     {
       return gameWon;
