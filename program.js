@@ -22,7 +22,7 @@ const playerSelection = prompt("Write: Rock, Paper or Scissors").toLowerCase();
 
 console.log(playerSelection);
 
-// playRound() playing one round of player vs computer
+// playing one round
 
 let playerScore = "0";
 let computerScore = "0";
@@ -35,7 +35,7 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "scissors" && computerSelection == "paper")
         ){
           playerScore ++;
-          winnerStatus = "winner";
+          winnerStatus = "You won the round.";
         }
     if (
         (playerSelection == "scissors" && computerSelection == "rock") ||
@@ -43,11 +43,11 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "paper" && computerSelection == "scissors")
         ){
           computerScore ++;
-          winnerStatus = "loser";
+          winnerStatus = "Computer wins, you lose the round.";
         }
     if (playerSelection === computerSelection)
         {
-          winnerStatus = "tie";
+          winnerStatus = "This is a tie round.";
         }
   return winnerStatus;
 }
@@ -55,11 +55,29 @@ function playRound(playerSelection, computerSelection) {
 playRound(playerSelection, computerSelection);
 console.log(winnerStatus);
 
-// loop to create 1 game based on 5 playRound()
+// loop to create game() based on 5 playRound()
+// need with loop: 
+// if winnerstatus = 5 * "You won the round."                 = win game
+// if winnerstatus = 5 * "Computer wins, you lose the round.  = lose game
+// if winterstatus = "This is a tie round."                   = no count
 
-//game (playRound());
-//  for (let i = 0; i < 5; i++) {
-//    if (let === 5) {
-//      return;
-//    }
-//};
+function game ();
+  for (let i = 0; i < 5; i++) {
+    if (let === 1) {
+      playRound(playerSelection, computerSelection);
+    }
+    if (let === 2) {
+      playRound(playerSelection, computerSelection);
+    }
+    if (let === 3) {
+      playRound(playerSelection, computerSelection);
+    }
+    if (let === 4) {
+      playRound(playerSelection, computerSelection);
+    }
+    if (let === 5) {
+      playRound(playerSelection, computerSelection)
+      return;
+    }
+  return;
+};
