@@ -60,10 +60,12 @@ function playRound(playerSelection, computerSelection) {
           alert("Tie round! No one won");
       }
 }
+
 // loop to create 1 game based on 5 playRound()
 
-game ();
-
-for (let i = 0; i < 5; i++) {
-    
-    };
+//game (playRound());
+//  for (let i = 0; i < 5; i++) {
+//    if (let === 5) {
+//      return;
+//    }
+//};
