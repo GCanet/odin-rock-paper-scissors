@@ -60,19 +60,19 @@ console.log(winnerStatus);
 const gameWon = alert("You won the 5 rounds game, you are a WINNER!");
 const gameLost = alert("Computer won the 5 rounds game, you are a LOSER!");
 
-function game ();
+function game(){
   for (let i = 0; i < 6; i++) {
     if (let === 1) {
-      playRound(playerSelection, computerSelection);
+      playRound(playerSelection, computerSelection)
     }
     if (let === 2) {
-      playRound(playerSelection, computerSelection);
+      playRound(playerSelection, computerSelection)
     }
     if (let === 3) {
-      playRound(playerSelection, computerSelection);
+      playRound(playerSelection, computerSelection)
     }
     if (let === 4) {
-      playRound(playerSelection, computerSelection);
+      playRound(playerSelection, computerSelection)
     }
     if (let === 5) {
       playRound(playerSelection, computerSelection)
@@ -87,8 +87,8 @@ function game ();
         return gameLost;
       }
     }
-  return;
-};
+  }
+}
 
 game();
 
