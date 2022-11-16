@@ -1,6 +1,10 @@
 // getComputerChoice()
 
-getComputerChoice();
+const myArray = ["Rock", "Paper", "Scissors"];
+
+function getComputerChoice() {
+  return myArray[~~(Math.random() * myArray.length)];
+}
 
 console.log(getComputerChoice());
 
@@ -11,11 +15,8 @@ const playerSelection = prompt("Choose Rock, Paper or Scissors:").toLowerCase();
 console.log(playerSelection);
 
 // computerSelection
-// 1 = rock > 2 = scissors
-// 2 = scissors > 3 = paper
-// 3 = paper > 1 = rock
 
-const computerSelection = getComputerChoice(); ;
+const computerSelection = getComputerChoice();
 
 console.log(computerSelection);
 
