@@ -60,19 +60,19 @@ console.log(winnerStatus);
 function game(){
   for (let i = 0; i < 6; i++) {
     if (i === 1) {
-      playRound(playerSelection, computerSelection)
+      playRound(playerSelection, computerSelection);
     }
     if (i === 2) {
-      playRound(playerSelection, computerSelection)
+      playRound(playerSelection, computerSelection);
     }
     if (i === 3) {
-      playRound(playerSelection, computerSelection)
+      playRound(playerSelection, computerSelection);
     }
     if (i === 4) {
-      playRound(playerSelection, computerSelection)
+      playRound(playerSelection, computerSelection);
     }
     if (i === 5) {
-      playRound(playerSelection, computerSelection)
+      playRound(playerSelection, computerSelection);
     }
     if (i === 6) {
       if (playerScore > computerScore) 
@@ -89,7 +89,7 @@ function game(){
 
 game();
 
-// if winner dosen't work in loop with let == 6 i can try 
+// if winner dosen't work in loop with i === 6 i can try 
 // it like i was doing at start:
 //
 //function winner(playerScore, computerScore) {
