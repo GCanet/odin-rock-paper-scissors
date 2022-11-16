@@ -18,7 +18,7 @@ console.log(computerSelection);
 
 // getting player choice
 
-const playerSelection = prompt("Choose Rock, Paper or Scissors:").toLowerCase();
+const playerSelection = prompt("Write: Rock, Paper or Scissors").toLowerCase();
 
 console.log(playerSelection);
 
@@ -26,7 +26,7 @@ console.log(playerSelection);
 
 let playerScore = "0";
 let computerScore = "0";
-let winnerStatus = ""
+let winnerStatus = "";
 
 function playRound(playerSelection, computerSelection) {
     if (
