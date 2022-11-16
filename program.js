@@ -52,6 +52,7 @@ function playRound(playerSelection, computerSelection) {
   return winnerStatus;
 }
 
+playRound(playerSelection, computerSelection);
 console.log(winnerStatus);
 
 // loop to create 1 game based on 5 playRound()
