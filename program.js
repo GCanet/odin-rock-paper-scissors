@@ -16,12 +16,6 @@ const computerSelection = getComputerChoice();
 
 console.log(computerSelection);
 
-// getting player choice
-
-const playerSelection = prompt("Write: Rock, Paper or Scissors").toLowerCase();
-
-console.log(playerSelection);
-
 // playing one round
 
 let playerScore = "0";
@@ -52,54 +46,32 @@ function playRound(playerSelection, computerSelection) {
   return winnerStatus;
 }
 
-playRound(playerSelection, computerSelection);
-console.log(winnerStatus);
-
 // game() function based on loop of 5 playRound() + winner declaration
 
-function game(){
-  for (let i = 0; i < 6; i++) {
-    if (i === 1) {
-      playRound(playerSelection, computerSelection);
-    }
-    if (i === 2) {
-      playRound(playerSelection, computerSelection);
-    }
-    if (i === 3) {
-      playRound(playerSelection, computerSelection);
-    }
-    if (i === 4) {
-      playRound(playerSelection, computerSelection);
-    }
-    if (i === 5) {
-      playRound(playerSelection, computerSelection);
-    }
-    if (i === 6) {
-      if (playerScore > computerScore) 
-      {
-        return alert("You won the 5 rounds game, you are a WINNER!");
-      } else { (playerScore < computerScore)
-        {
-        return alert("Computer won the 5 rounds game, you are a LOSER!");
-        }
-      }
-    }
+function game() {
+    
+  for (let i = 0; i < 5; i++){
+      let playerSelection;
+      let computerSelection;
+
+      playerSelection = prompt("Write: Rock, Paper or Scissors").toLowerCase();
+      computerSelection = getComputerChoice();
+
+      console.log(playRound(computerSelection, playerSelection));
+  }
+
+  if (playerScore > computerScore)
+  {
+      console.log(`You win! score: ${playerScore} to ${computerScore}`);
+  }
+  else if (computerScore > playerScore)
+  {
+      console.log(`Computer wins! score: ${playerScore} to ${computerScore}`);
+  }
+  else
+  {
+      console.log(`It's a tie! score: ${playerScore} to ${computerScore}`);
   }
 }
 
 game();
-
-// if winner dosen't work in loop with i === 6 i can try 
-// it like i was doing at start:
-//
-//function winner(playerScore, computerScore) {
-//  if (playerScore > computerScore) 
-//  {
-//    return gameWon;
-//  }
-//  if (playerScore < computerScore)
-//  {
-//    return gameLost;
-//  }
-//}
-//winner(playerScore, computerScore);
