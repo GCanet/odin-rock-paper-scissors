@@ -34,21 +34,22 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "rock" && computerSelection == "scissors") ||
         (playerSelection == "scissors" && computerSelection == "paper")
         ){
-            playerScore ++;
-            winnerStatus = "winner";
+          playerScore ++;
+          winnerStatus = "winner";
         }
     if (
         (playerSelection == "scissors" && computerSelection == "rock") ||
         (playerSelection == "rock" && computerSelection == "paper") ||
         (playerSelection == "paper" && computerSelection == "scissors")
         ){
-            computerScore ++;
-            winnerStatus = "loser";
+          computerScore ++;
+          winnerStatus = "loser";
         }
     if (playerSelection === computerSelection)
         {
-            winnerStatus = "tie";
+          winnerStatus = "tie";
         }
+  return winnerStatus;
 }
 
 console.log(winnerStatus);
