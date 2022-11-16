@@ -1,9 +1,15 @@
 // getting computer choice
 
-const myArray = ["rock", "paper", "scissors"];
-
 function getComputerChoice() {
-  return myArray[~~(Math.random() * myArray.length)];
+  let randomNumber = Math.floor(Math.random() * 3)
+  switch (randomNumber) {
+    case 0:
+      return 'rock';
+    case 1:
+      return 'paper';
+    case 2:
+      return 'scissors';
+  }
 }
 
 const computerSelection = getComputerChoice();
@@ -18,8 +24,8 @@ console.log(playerSelection);
 
 // playRound() playing one round of player vs computer
 
-let playerScore = "0"
-let computerScore = "0"
+let playerScore = "0";
+let computerScore = "0";
 let winnerStatus = ""
 
 function playRound(playerSelection, computerSelection) {
@@ -29,8 +35,7 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "scissors" && computerSelection == "paper")
         ){
             playerScore ++;
-            winnerStatus = "winner"
-            alert("You won");
+            winnerStatus = "winner";
         }
     if (
         (playerSelection == "scissors" && computerSelection == "rock") ||
@@ -38,16 +43,15 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "paper" && computerSelection == "scissors")
         ){
             computerScore ++;
-            winnerStatus = "loser"
-            alert("You lost");
+            winnerStatus = "loser";
         }
-    if (playerSelection === computerSelection){
-            winnerStatus = "tie"
-            alert("Tie round!");
+    if (playerSelection === computerSelection)
+        {
+            winnerStatus = "tie";
         }
 }
 
-console.log(playRound());
+console.log(winnerStatus);
 
 // loop to create 1 game based on 5 playRound()
 
