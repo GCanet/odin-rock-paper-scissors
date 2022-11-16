@@ -95,5 +95,4 @@ function winner(playerScore, computerScore) {
   return;
 }
 
-winner(gameWon, gameLost);
-console.log(winner(gameWon, gameLost));
+winner(playerScore, computerScore);
