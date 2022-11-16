@@ -18,44 +18,36 @@ console.log(playerSelection);
 
 // playRound() playing one round of player vs computer
 
+let playerScore = "0"
+let computerScore = "0"
+let winnerStatus = ""
+
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == "paper" && computerSelection == "rock")
-        function win() {
-          alert("You won, paper wins rocks");
+    if (
+        (playerSelection == "paper" && computerSelection == "rock") ||
+        (playerSelection == "rock" && computerSelection == "scissors") ||
+        (playerSelection == "scissors" && computerSelection == "paper")
+        ){
+            playerScore ++;
+            winnerStatus = "winner"
+            alert("You won");
         }
-    if (playerSelection == "rock" && computerSelection == "scissors")
-        function win() {
-          alert("You won, rock wins scissors");
+    if (
+        (playerSelection == "scissors" && computerSelection == "rock") ||
+        (playerSelection == "rock" && computerSelection == "paper") ||
+        (playerSelection == "paper" && computerSelection == "scissors")
+        ){
+            computerScore ++;
+            winnerStatus = "loser"
+            alert("You lost");
         }
-    if (playerSelection == "scissors" && computerSelection == "paper")
-        function win() {
-          alert("You won, scissors wins paper");
+    if (playerSelection === computerSelection){
+            winnerStatus = "tie"
+            alert("Tie round!");
         }
-    if (playerSelection == "scissors" && computerSelection == "rock")
-        function lose() {
-          alert("You lost, rock wins scissors");
-        }
-    if (playerSelection == "rock" && computerSelection == "paper")
-        function lose() {
-          alert("You lost, paper wins rock");
-        }
-    if (playerSelection == "paper" && computerSelection == "scissors")
-        function lose() {
-          alert("You lost, scissors wins paper");
-        }
-    if (playerSelection == "rock" && computerSelection == "rock")
-        function tie() {
-          alert("Tie round! No one won");
-        }
-    if (playerSelection == "paper" && computerSelection == "paper")
-        function tie() {
-          alert("Tie round! No one won");
-        }
-    if (playerSelection == "scissors" && computerSelection == "scissors")
-        function tie() {
-          alert("Tie round! No one won");
-      }
 }
+
+console.log(playRound());
 
 // loop to create 1 game based on 5 playRound()
 
