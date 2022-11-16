@@ -55,11 +55,7 @@ function playRound(playerSelection, computerSelection) {
 playRound(playerSelection, computerSelection);
 console.log(winnerStatus);
 
-// loop to create game() based on 5 playRound()
-// need with loop: 
-// if winnerstatus = 5 * "You won the round."                 = win game
-// if winnerstatus = 5 * "Computer wins, you lose the round.  = lose game
-// if winterstatus = "This is a tie round."                   = no count
+// game() function based on loop of 5 playRound()
 
 function game ();
   for (let i = 0; i < 5; i++) {
@@ -81,3 +77,23 @@ function game ();
     }
   return;
 };
+
+// score = 5 = declare winner
+
+const gameWon = alert("You won the computer 5 times, you are a WINNER!");
+const gameLost = alert("The computer won 5 times, you are a LOSER!");
+
+function winner(gameWon, gameLost) {
+  if (playerScore == 5)
+    {
+      return gameWon;
+    }
+  if (computerScore == 5)
+    {
+      return gameLost;
+    }
+  return;
+}
+
+winner(gameWon, gameLost);
+console.log(winner(gameWon, gameLost));
