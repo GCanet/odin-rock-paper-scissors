@@ -4,25 +4,25 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <script src='program.js'></script>
-    <link rel='stylesheet' href='style.css'>
+        <link rel='stylesheet' href='style.css'>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class='currentscore'>
         <h1>Rock Paper Scissors</h1>
             <div class='players'>
-                <p id='playerscore'></p>
-                <p id='computerscore'></p>
+                <p id='player'>You: <span id='playersc'></span></p>
+                <p id='computer'>Computer: <span id='computersc'></span></p>
             </div>
     </div>
     <div class='buttons'>
         <h2>Try your luck:</h2>
             <div class='botones'>
-                <button id='rock'><img src='rock.png'></button>
-                <button id='paper'><img src='paper.png'></button>
-                <button id='scissors'><img src='scissors.png'></button>
+                <button id='rock' onclick='playRound(playerSelection, computerSelection)'><img src='rock.png'></button>
+                <button id='paper' onclick='playRound(playerSelection, computerSelection)'><img src='paper.png'></button>
+                <button id='scissors' onclick='playRound(playerSelection, computerSelection)'><img src='scissors.png'></button>
             </div> 
     </div>
+<script src='program.js'></script>
 </body>
 </html>
