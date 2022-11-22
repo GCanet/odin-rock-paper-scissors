@@ -1,9 +1,26 @@
+// scores to 0 at start
+
 let playerScore = '0';
 let computerScore = '0';
+
+// update results on html
+
 document.getElementById('playersc').innerHTML = playerScore;
 document.getElementById('computersc').innerHTML = computerScore;
-const buttonid = document.querySelectorAll('button');
-buttonid.forEach(button => { button.addEventListener('click', getPlayerChoice) });
+
+// getting player choice from buttom
+
+const botones = document.querySelectorAll('div.botones button');
+botones.forEach(button => { button.addEventListener('click', getPlayerChoice) });
+
+let playerSelection;
+
+function getPlayerChoice(e) {
+  let playerSelection = (e.target.id);
+  playRound(playerSelection, computerSelection);
+}
+
+// getting computer choice
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3)
@@ -19,36 +36,39 @@ function getComputerChoice() {
 
 let computerSelection = getComputerChoice();
 
-function getPlayerChoice(e) {
-  let playerSelection = (e.target.id);
-  playRound(playerSelection, computerSelection);
-}
+// one round game function
 
 function playRound(playerSelection, computerSelection) {
-  if (
-        (playerSelection == 'paper' && computerSelection == 'rock') ||
-        (playerSelection == 'rock' && computerSelection == 'scissors') ||
-        (playerSelection == 'scissors' && computerSelection == 'paper')
-        ){
-          playerScore++;
-        }
-  if (
-        (playerSelection == 'scissors' && computerSelection == 'rock') ||
-        (playerSelection == 'rock' && computerSelection == 'paper') ||
-        (playerSelection == 'paper' && computerSelection == 'scissors')
-        ){
-          computerScore++;
-        }
-  if (playerScore == 5)
-        {
-          alert('You are the winner!!');
-          playerScore = '0';
-          computerScore = '0';
-        }
-  if (computerScore == 5)
-        {
-          alert('Computer Wins!! You lose!!');
-          playerScore = '0';
-          computerScore = '0';
-        }
+    if (
+      (playerSelection == 'paper' && computerSelection == 'rock') ||
+      (playerSelection == 'rock' && computerSelection == 'scissors') ||
+      (playerSelection == 'scissors' && computerSelection == 'paper')
+      ){
+        playerScore++;
+      }
+    if (
+      (playerSelection == 'scissors' && computerSelection == 'rock') ||
+      (playerSelection == 'rock' && computerSelection == 'paper') ||
+      (playerSelection == 'paper' && computerSelection == 'scissors')
+      ){
+        computerScore++;
+      }
+  checkWinner();
 }
+
+// alert winner on 5 points + reset game
+
+function checkWinner() {
+    if (computerScore === 5) {
+      alert('Computer Wins!! You lose!!')
+      }
+    if (playerScore === 5) {
+      alert('You are the winner!!')
+      }
+    if (computerScore === playerScore){
+      alert('TIE GAME!!')
+      }
+  playerScore = '0';
+  computerScore = '0';
+}
+
