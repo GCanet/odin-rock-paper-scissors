@@ -2,6 +2,8 @@ let playerScore = '0';
 let computerScore = '0';
 document.getElementById('playersc').innerHTML = playerScore;
 document.getElementById('computersc').innerHTML = computerScore;
+const buttonid = document.querySelectorAll('button');
+buttonid.forEach(button => { button.addEventListener('click', getPlayerChoice) });
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3)
@@ -16,7 +18,11 @@ function getComputerChoice() {
 }
 
 let computerSelection = getComputerChoice();
-let playerSelection = button.id;
+
+function getPlayerChoice(e) {
+  let playerSelection = (e.target.id);
+  playRound(playerSelection, computerSelection);
+}
 
 function playRound(playerSelection, computerSelection) {
   if (
