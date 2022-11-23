@@ -8,18 +8,6 @@ let computerScore = '0';
 document.getElementById('playersc').innerHTML = playerScore;
 document.getElementById('computersc').innerHTML = computerScore;
 
-// getting player choice from buttom
-
-const botones = document.querySelectorAll('div.botones button');
-botones.forEach(button => { button.addEventListener('click', getPlayerChoice) });
-
-let playerSelection;
-
-function getPlayerChoice(e) {
-  let playerSelection = (e.target.id);
-  playRound(playerSelection, computerSelection);
-}
-
 // getting computer choice
 
 function getComputerChoice() {
@@ -35,6 +23,20 @@ function getComputerChoice() {
 }
 
 let computerSelection = getComputerChoice();
+
+// getting player choice from buttom
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', getPlayerChoice)});
+
+function getPlayerChoice() {
+  let playerSelection = (buttons.id);
+  playRound(playerSelection, computerSelection);
+}
+
+let playerSelection = getPlayerChoice();
 
 // one round game function
 
@@ -53,6 +55,10 @@ function playRound(playerSelection, computerSelection) {
       ){
         computerScore++;
       }
+    if (playerSelection === computerSelection)
+      {
+        console.log("tie round")
+      }
   checkWinner();
 }
 
@@ -65,10 +71,5 @@ function checkWinner() {
     if (playerScore === 5) {
       alert('You are the winner!!')
       }
-    if (computerScore === playerScore){
-      alert('TIE GAME!!')
-      }
-  playerScore = '0';
-  computerScore = '0';
 }
 
