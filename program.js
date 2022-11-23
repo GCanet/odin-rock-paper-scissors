@@ -50,7 +50,7 @@ function playRound(playerSelection, computerSelection) {
       (playerSelection == 'scissors' && computerSelection == 'paper')
       ){
         playerScore++;
-        console.log('player wins')
+        console.log('You chose: ${playerSelection}, Computer chose: ${computerSelection}. You win this round!!')
       }
     if (
       (playerSelection == 'scissors' && computerSelection == 'rock') ||
@@ -58,13 +58,17 @@ function playRound(playerSelection, computerSelection) {
       (playerSelection == 'paper' && computerSelection == 'scissors')
       ){
         computerScore++;
-        console.log('computer wins')
+        console.log('You chose: ${playerSelection}, Computer chose: ${computerSelection}. Computer win this round!!')
       }
     if (playerSelection === computerSelection)
       {
-        console.log('tie round')
+        console.log('You chose: ${playerSelection}, Computer chose: ${computerSelection}. Tie round!!')
       }
 }
+
+// console log to display message creating dom with js
+// where? -> div.buttons create div child append last
+// change winner alerts for the same ^
 
 // alert winner on 5 points + reset game
 
