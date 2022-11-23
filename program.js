@@ -3,7 +3,7 @@ let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-// update results on html
+// update results on html // NOT WORKING // 
 
 document.getElementById('playersc').innerHTML = playerScore;
 document.getElementById('computersc').innerHTML = computerScore;
