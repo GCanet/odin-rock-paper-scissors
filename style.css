@@ -11,12 +11,12 @@ h1 {
     font-weight: bolder;
     color: black;
     max-width: 500px;
-    margin-bottom: 0px;
+    margin-bottom: auto;
     text-align: center;
     justify-content: center;
     text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
-    margin-top: 10px;
+    margin-top: auto;
 }
 
 .rocks {
@@ -122,22 +122,9 @@ button {
     margin-bottom: 20px;
 }
 
-.header {
-    background-color: gray;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center;
-    height: 30px;
-    width: 100%;
-    color: black;
-    font-size: 10px;
-    margin-bottom: 40px;
-}
-
-.url {
+a {
     font-size: 9px;
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
     background-color: gray;
 }
@@ -149,13 +136,25 @@ button {
 #computersc {
     margin-left: 30px;
     margin: 30px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 .roundtext {
     margin-bottom: 20px;
     text-align: center;
     font-weight: lighter;
+}
+
+header {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    color: black;
+    font-size: 9px;
+    margin-bottom: auto;
 }
 
 footer {
@@ -165,8 +164,18 @@ footer {
     align-items: center;
     height: 30px;
     width: 100%;
-    bottom: 0;
     color: black;
     font-size: 10px;
-    margin-top: 30px;
+    margin-top: auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }

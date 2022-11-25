@@ -49,7 +49,7 @@ function playRound(playerSelection, computerSelection) {
       (playerSelection == 'scissors' && computerSelection == 'paper')
       ){
         playerScore++;
-        combatText.innerText = `You chose: ${playerSelection}, Computer chose: ${computerSelection}. You win this round!!`;
+        combatText.innerText = `${playerSelection} vs ${computerSelection}. YOU WIN this round!!`;
         document.getElementById('playersc').innerHTML = playerScore;
         document.getElementById('computersc').innerHTML = computerScore;
       }
@@ -59,13 +59,13 @@ function playRound(playerSelection, computerSelection) {
       (playerSelection == 'paper' && computerSelection == 'scissors')
       ){
         computerScore++;
-        combatText.innerText = `You chose: ${playerSelection}, Computer chose: ${computerSelection}. Computer win this round!!`;
+        combatText.innerText = `${playerSelection} vs ${computerSelection}. YOU LOSE this round!!`;
         document.getElementById('playersc').innerHTML = playerScore;
         document.getElementById('computersc').innerHTML = computerScore;
       }
     if (playerSelection === computerSelection)
       {
-        combatText.innerText = `You chose: ${playerSelection}, Computer chose: ${computerSelection}. Tie round!!`;
+        combatText.innerText = `${playerSelection} vs ${computerSelection}. TIE round!!`;
         document.getElementById('playersc').innerHTML = playerScore;
         document.getElementById('computersc').innerHTML = computerScore;
       }
@@ -75,14 +75,14 @@ function playRound(playerSelection, computerSelection) {
 
 function checkWinner() {
     if (computerScore === 5) {
-      combatText.innerText = `Computer won 5 rounds! You lose!!`;
+      combatText.innerText = `Computer won 5 rounds! You LOSE!`;
       playerScore = 0;
       computerScore = 0;
       document.getElementById('playersc').innerHTML = playerScore;
       document.getElementById('computersc').innerHTML = computerScore;
       }
     if (playerScore === 5) {
-      combatText.innerText = `You won 5 rounds! You are the winner!!`;
+      combatText.innerText = `You won 5 rounds! You WIN!`;
       playerScore = 0;
       computerScore = 0;
       document.getElementById('playersc').innerHTML = playerScore;
